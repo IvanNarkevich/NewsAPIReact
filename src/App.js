@@ -3,37 +3,44 @@ import logo from './logo.svg';
 import './App.css';
 
 function NewsItem(props) {
-	let images;
-	if (props.urlToImage){
-		images = <img src={props.urlToImage} alt={props.url}/>
-	}
-	else
-		images = "";
-  return (
-      <div className="news__item">
+    let images;
+    if (props.urlToImage){
+	images = <img src={props.urlToImage} alt={props.url}/>
+    }
+    else
+	images = "";
+    return (
+        <div className="news__item">
         <a className="news_class" href={props.url}>{props.title}<br/>{images}<br/> <hr/></a>
-      </div>);
+        </div>);
 }
 
 class News extends React.Component{
 	constructor(props) {
-    super(props);
-    this.apiKey = 'a2e47115d1424ba98afeedef8beeed98';
-    this.curPage = 0;
-    this.endPage = 8;
-    this.searchQuery = '';
-    this.lastRequest = '';
-	this.lastevent = '';
-    this.loadMore = true;
-    this.state = {
-      articles: [],
-      sources: []
-    }
+		super(props);
+		this.apiKey = 'a2e47115d1424ba98afeedef8beeed98';
+		this.curPage = 0;
+		this.endPage = 8;
+		this.searchQuery = '';
+		this.lastRequest = '';
+		this.lastevent = '';
+		this.loadMore = true;
+		this.state = {
+		    articles: [],
+		    sources: []
+		}
 	}
+	    
 	componentDidMount() {
 		var news_link = "https://newsapi.org/v2/sources?apiKey=" + this.apiKey;
 		var request = new Request(news_link);
-		fetch(request).then((response) => response.json()).then((data) => {this.setState({sources: data['sources']});});
+		fetch(request)
+			.then((response) => {
+				return response.json();
+				})
+			.then((data) => {
+				this.setState({sources: data['sources']});
+			});
 	}
 	
 	get_cur_time(){
