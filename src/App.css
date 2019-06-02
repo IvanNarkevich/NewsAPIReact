@@ -1,0 +1,104 @@
+header{
+	margin-bottom: 5%;
+}
+main{
+    position: absolute;
+    margin-left: 20%;
+	padding-bottom: 100px;
+	//width: 80%;
+}
+
+aside{	
+	padding-bottom: 100px;
+	width: 20%;
+}
+
+.date h1{
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+	margin: 0;
+}
+
+.btn_search_class{
+	float: right;
+	font-weight: bold;	
+}
+
+.btn_search_class:hover{
+	color: green;
+}
+
+.field_search_class{
+	float: right;
+}
+
+.news_class:hover{
+	color: red;
+	text-decoration: none;
+}
+
+.btn_choose_tag{
+	width: 50%;
+	height: 10%;
+	font-weight: bold;
+	padding-top: 5px; 
+	background-color: orangered;
+	color: white;	
+}
+
+.btn_choose_tag:hover{
+	color: green;	
+}
+
+
+.app__footer{
+  height: 100px;
+  text-align: left;
+}
+
+.app__footer-text{
+  font-size: 20px;
+  color: white;
+}
+
+.app__footer-link{
+  text-decoration: none;
+  outline: none;
+  color: red;
+}
+
+
+img{
+	width: 80%;
+}
+
+hr{
+	height: 5px;
+	background-color: gray;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.news_class{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 120%;
+	font-style: italic;
+	
+}
+
+.source_btn{
+	width: 50%;
+	height: 10%;
+	font-weight: bold;
+	padding-top: 5px; 
+	background-color: orangered;
+	color: white;	
+}
+
+.source_btn:hover{
+	color: green;	
+}
